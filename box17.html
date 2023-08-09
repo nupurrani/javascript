@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="op"></div>
+    <script>
+        let students={
+            "name":"KMPM Inter College",
+            "student1":{
+                "name":"Ankit Kr",
+                "roll":"1"
+            },
+            "student2":{
+                "name":"Amit Kr",
+                "roll":"2"
+            }
+       
+        }
+      // document.getElementById("op").innerHTML=students["student1"]["name"];
+     //  document.getElementById("op").innerHTML=students.student1.name;
+     document.getElementById("op").innerHTML=JSON.stringify(students);
+    </script>
+</body>
+</html>

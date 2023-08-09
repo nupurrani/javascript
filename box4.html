@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button onclick="fun()" id="btn">HIDE</button>
+    <div id="box">
+        hello
+    </div>
+    <script>
+        function fun()
+        {
+             if(document.getElementById("box").style.display==="none")
+
+            {
+                document.getElementById("box").style.display="block";
+                document.getElementById("btn").innerHTML="HIDE";
+            }
+            else {
+                document.getElementById("box").style.display="none";
+                document.getElementById("btn").innerHTML="SHOW";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="op"></div>
+    <script>
+        var txt="<ul> ";
+        var i;
+        ///Array
+       // var data=["Pen","Pencil","Eraser"];
+        var data=new Array("Pen","Pencil","Eraser");
+
+
+        ///Loop- for,while,do-while
+        for(i=0;i<data.length;i++){
+          txt+="<li>"+ data[i] +"</li>";
+
+        }
+        txt+="</ul>";
+      //  document.getElementById("op").innerHTML=txt;
+        document.getElementById("op").innerHTML=data;
+    </script>
+</body>
+</html>

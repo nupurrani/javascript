@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="fun()" id="data">
+        <label>Enter first No</label>
+        <input type="text" name="fno" placeholder="Enter first No" required/>
+        <label>Enter Second No</label>
+        <input type="text" name="sno" placeholder="Enter Second No" required/>  
+        <input type="submit" value="calculate"> 
+    </form>
+    <script>
+        function fun(){
+          //  alert("hiii");
+         // var fno=document.forms["data"]["fno"].value;
+         // var sno=document.forms["data"]["sno"].value;
+         var fno=parseInt(document.forms["data"]["fno"].value);
+         var sno=parseInt(document.forms["data"]["sno"].value);
+          var result;
+          result=fno+sno;
+          alert(result);
+        }
+    </script>
+</body>
+</html>

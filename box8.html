@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form onsubmit="fun()" id="data"> -->
+        <form >
+        <label>Enter age</label>
+        <input type="text" name="age" placeholder="Enter age" id="age" required/>  
+        <!-- <input type="submit" value="submit">  -->
+        <button onclick="fun()" id="age">Submit</button>
+    </form>
+    <script>
+        function fun(){
+    //    var age=parseInt(document.forms["data"]["age"].value);
+    var age = document.getElementById("age").value;
+        if(age>=18)
+        {
+            //TRUE
+        alert("Eligible for vote")
+        }
+        else{
+            alert("Not Eligible")  
+        }
+          
+        //3
+        //  var age=parseInt(document.forms["data"]["age"].value);
+        // var sno=parseInt(document.forms["data"]["sno"].value);
+        //  var result;
+          //result=age;
+          //alert(result);
+        }
+    </script>
+</body>
+</html>

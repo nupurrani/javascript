@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="op"></div>
+    <div id="oc"></div>
+    <div id="om"></div>
+
+    <script>
+        var today =new Date();
+        var dname;
+
+        switch(today.getDay())
+        {
+            case 0:
+                dname="Sunday";
+                break;
+            case 1:
+                dname="Monday";
+                break;
+            case 2:
+                dname="Tuesday";
+                break;
+            case 3:
+                dname="Wednesday";
+                break;
+            case 4:
+                dname="Thursday";
+                break;
+            case 5:
+                dname="Friday";
+                break;
+            case 6:
+                dname="saturday";
+                break;
+            default:
+                alert("something wrong");
+                break;
+        }
+     //   document.getElementById("op").innerHTML=today;
+     document.getElementById("op").innerHTML=dname;
+     document.getElementById("oc").innerHTML=today.getfullYear();
+     //document.getElementById("om").innerHTML=today.getHours();
+    </script>
+</body>
+</html>

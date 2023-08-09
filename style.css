@@ -1,0 +1,31 @@
+input[type=text]{
+    border: none;
+   border-bottom:solid 1px black;
+
+}
+input[type=text]:focus{
+    /* background: #0000ff; */
+    outline: none;
+}
+
+input[type=submit]{
+    background: #ffff00;
+    color: red;
+    padding: 10px 25px;
+}
+input[type=submit]:hover{
+  
+}
+textarea{
+    width:200px;
+    resize: none;
+}
+span, sup{
+   color: red;
+ }
+table{
+    width:100%;
+}
+parea{
+    
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fun()">
+    <div id="op"></div>
+    <div id="oc"></div>
+    <div id="om"></div>
+    <div id="on"></div>
+    <div id="nupur"></div>
+
+
+
+
+
+    <script>
+        function fun(){
+                var today =new Date();
+                var dname;
+                var h,m,s,a;
+                h=today.getHours();
+                m=today.getMinutes();
+                s=today.getSeconds();
+                    if(h>12)
+                    {
+                        h=h-12;
+                    }
+                    if(h==12)
+                    {
+                        h=0;
+                    }
+                switch(today.getDay())
+                {
+                    case 0:
+                        dname="Sunday";
+                        break;
+                    case 1:
+                        dname="Monday";
+                        break;
+                    case 2:
+                        dname="Tuesday";
+                        break;
+                    case 3:
+                        dname="Wednesday";
+                        break;
+                    case 4:
+                        dname="Thursday";
+                        break;
+                    case 5:
+                        dname="Friday";
+                        break;
+                    case 6:
+                        dname="saturday";
+                        break;
+                    default:
+                        alert("something wrong");
+                        break;
+                }
+            
+            setTimeout(function(){fun()},1000);
+            //   document.getElementById("op").innerHTML=today;
+            document.getElementById("op").innerHTML=dname;
+           // document.getElementById("oc").innerHTML=h+":"+m+":"+s;
+           document.getElementById("oc").innerHTML=dd(h)+":"+dd(m)+":"+dd(s);
+          
+            function dd(a)
+            {
+                    if(a<10)
+                {
+                    return("0"+a);
+                }
+                else{
+                    return a;
+                }
+            }
+           
+        }
+       
+    </script>
+</body>
+</html>

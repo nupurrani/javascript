@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form onsubmit=" return fun()" id="data">
+        <label>Enter Name <sup>*</sup></label>
+        <input type="text" name="name" placeholder="Enter Name"/> <span id="ename"></span> 
+        <label>Enter Mobile<sup>*</sup></label>
+        <input type="text" name="mobile" placeholder="Enter Mobile"/><span id="emobile"></span>
+        <label>Enter EmailId<sup>*</sup></label>
+        <input type="text" name="email" placeholder="Enter EmailId"/><span id="eemail"></span>
+        <input type="submit" value="submit"> 
+    </form>
+    <script>
+        function fun(){
+          
+         var name=document.forms["data"]["name"].value;
+         var mobile=document.forms["data"]["mobile"].value;
+         var email=document.forms["data"]["email"].value;
+         var e=0;
+         if(name===""){
+           // alert("Name is Mandetory");
+            document.getElementById("ename").innerHTML="Name is Mandetory";
+            e=1;
+         }
+         else if(name.length<3)
+         {
+         document.getElementById("ename").innerHTML="Name_ Min 3 characters Required";
+         e=1;
+        }
+        else if(!isNaN(name))
+        {
+            document.getElementById("ename").innerHTML="Invalid Data";
+            e=1;  
+        }
+
+        if(mobile===""){
+           // alert("moile no. is Mandetory");
+           //alert("hi");
+            document.getElementById("emobile").innerHTML="Mobile is Mandetory";
+            e=1;
+         }
+        else if(isNaN(mobile))
+        {
+            document.getElementById("emobile").innerHTML="Invalid Mobile";
+            e=1;  
+        }
+        else if(mobile.length!=10)
+         {
+         document.getElementById("emobile").innerHTML="Mobile_ 10 Digit Required";
+         e=1;
+        }
+
+
+        if(email===""){
+           // alert("Name is Mandetory");
+            document.getElementById("eemail").innerHTML="EmailId is Mandetory";
+            e=1;
+         }
+         else if(name.length<3)
+         {
+         document.getElementById("eemail").innerHTML="Min 10 digit Required";
+         e=1;
+        }
+        else if(!isNaN(name))
+        {
+            document.getElementById("eemail").innerHTML="Your email doesn't appear to be valid, please double check the spelling of your email";
+            e=1;  
+        }
+
+        if(e===1){
+            return false;
+        }
+        
+    }
+    </script>
+</body>
+</html>
